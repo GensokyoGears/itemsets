@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Add New User Form</title>
+</h:head>
+<h:body>
+	<ui:composition template="/templates/layout_pf.xhtml">
+
+		<ui:define name="content">
+			<ui:repeat value="#{itemSetDetail.jsonObj}" var="obj">
+
+				<p:panelGrid styleClass="champDetContainer" columns="2">
+					<p:graphicImage url="#{itemSetDetail.champObj.image}"
+						styleClass="grayBorder"></p:graphicImage>
+					<p:panelGrid columns="1">
+						<p:outputLabel styleClass="champDetName"
+							value="#{itemSetDetail.champObj.name} "></p:outputLabel>
+						<p:outputLabel styleClass="champDetTitle"
+							value="#{itemSetDetail.champObj.title}"></p:outputLabel>
+					</p:panelGrid>
+				</p:panelGrid>
+
+
+				<p:panel header="Item set info" style="margin-top:5px;">
+					<p:panelGrid columns="1" style="width:100%">
+						<p:panelGrid columns="2" style="width:100%">
+							<p:outputLabel value="Title: #{obj.get('title')}"></p:outputLabel>
+							<p:outputLabel value="Type: #{obj.get('type')}"></p:outputLabel>
+							<p:outputLabel value="Map: #{obj.get('map')}"></p:outputLabel>
+							<p:outputLabel value="Mode: #{obj.get('mode')}"></p:outputLabel>
+							<p:outputLabel value="Priority: #{obj.get('priority')}"></p:outputLabel>
+							<p:outputLabel value="SortRank: #{obj.get('sortrank')}"></p:outputLabel>
+							<p:outputLabel value="Author: #{itemSetDetail.is.username}"></p:outputLabel>
+							<p:outputLabel value="Downloads: #{itemSetDetail.is.download}"></p:outputLabel>
+						</p:panelGrid>
+						<ui:repeat value="#{obj.get('blocks')}" var="block">
+							<p:panel
+								header="#{itemSetDetail.doGetBlockHeader(block.get('type'),block.get('showIfSummonerSpell'))}">
+
+								<ui:repeat value="#{block.get('items')}" var="item">
+
+									<ui:repeat
+										value="#{itemSetDetail.doGetItemObject(item.get('id'))}"
+										var="itemObj">
+										<p:graphicImage id="itemImage" url="#{itemObj.image}"></p:graphicImage>
+										<p:tooltip id="tooltipImages" for="itemImage" escape="false"
+											trackMouse="true">
+											<h:panelGrid columns="1" style="width:100%">
+												<p:outputLabel escape="false" value="#{itemObj.name}"></p:outputLabel>
+												<p:graphicImage url="#{itemObj.image}" height="30"
+													width="30" />
+												<p:outputLabel styleClass="smallFont" escape="false"
+													value="#{itemObj.description}"></p:outputLabel>
+											</h:panelGrid>
+										</p:tooltip>
+									</ui:repeat>
+
+								</ui:repeat>
+							</p:panel>
+						</ui:repeat>
+
+						<h:form>
+							<p:commandButton value="Download"
+								action="#{itemSetDetail.download()}" execute="@form"
+								update="@form" type="submit"></p:commandButton>
+						</h:form>
+					</p:panelGrid>
+				</p:panel>
+			</ui:repeat>
+
+
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

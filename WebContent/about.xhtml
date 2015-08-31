@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="/templates/layout_pf.xhtml">
+
+		<ui:define name="content">
+			<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+					<br></br>
+				<p:outputLabel value="Welcome!"></p:outputLabel>
+				<br></br>
+				<p:outputLabel
+					value="This Web Application was created as an entry for Riot API Challenge 2.0 in 2015."></p:outputLabel>
+					<p:outputLabel value="The main goal of the application is to create a tool for creating and sharing Item Sets that all League players can use."></p:outputLabel>
+					<p:outputLabel value="Every item set created by our application goes into Archive, from where it can be accesed again."></p:outputLabel>
+					<p:outputLabel value="Feel free to use the navigation panel at the top or the links below to:"></p:outputLabel>
+					<br></br>
+					<p:link outcome="archive.xhtml" value="Access the Archve"/>
+					<p:link outcome="drag.xhtml" value="Create your Item Set"/>
+					<p:link outcome="help.xhtml" value="Read helpful information about usage of the application"/>
+					<br></br>
+					<p:outputLabel value="Have fun!"></p:outputLabel>
+					<br></br>
+					<br></br>
+					
+				<br></br>
+				<p:outputLabel value="Authors: "></p:outputLabel>
+				<p:outputLabel value="Magrakal (EUNE) "></p:outputLabel>
+				<p:outputLabel value="ShirouWrath (EUNE) "></p:outputLabel>
+				<br></br>
+				<p:outputLabel value="Solution used - JSF on Tomcat 7 server deployed on OpenShift gear"></p:outputLabel>
+				<p:outputLabel value="MySQL 5.5 database"></p:outputLabel>
+				<p:outputLabel value="PrimeFaces 5.2 framework"></p:outputLabel>
+				<br></br>
+				<p:outputLabel value="The creation of JSON files is based on League of Legends Item Sets Documentation:"></p:outputLabel>
+				<p:link href="https://developer.riotgames.com/docs/item-sets" value="Item Sets Documentation">
+				</p:link>
+			</h:panelGrid>
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,130 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	main, nav, section, summary {
+	display: block;
+}
+
+body{
+    background-size: 100%;
+	background: rgba(0, 0, 0, 0) url("http://2.bp.blogspot.com/-g8eIwORxrSI/VAkUf1kwgbI/AAAAAAAAA-0/2eRrFwvlYWE/s1600/Freljord_Wallpaper.jpg") no-repeat fixed center center / cover
+	 
+}
+
+.headerContainer {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+}
+
+.header {
+    background-color:#35495E;
+    height: 80px;
+    margin: 0 auto;
+    width: 80%;
+}
+.contentContainer {
+    width: 80%;
+    margin: 0 auto;
+/*     padding: 80px 0 30px; */
+	background-color:rgba(255,255,255,0.7);
+	min-height: 100%;
+}
+
+.content {
+	 padding: 87px 7px 30px;
+}
+
+.footerContainer {
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer{
+	background-color:#35495E;
+    height: 30px;
+    margin: 0 auto;
+	width: 80%;
+	display:table;
+}
+
+html,body {
+    height:100%;
+}
+
+.headerBanner{
+	background-color: black;
+    height: 100%;
+    width: 180px;
+    float: left;
+}
+
+.headerMenu{
+	background-color: gray;
+    height: 100%;
+    overflow: hidden;
+}
+
+.footer span{
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:5px;
+	color:black;
+}
+
+
+/* HEADER RIBBON */
+.headerMenu .ui-tabs-nav{
+	display:none;
+}
+
+.ui-ribbon .ui-ribbon-bigbutton{
+	width: 70px;
+	height: 70px;
+}
+

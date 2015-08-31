@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Add New User Form</title>
+</h:head>
+<h:body>
+	<ui:composition template="/templates/layout_pf.xhtml">
+
+		<ui:define name="content">
+			<p:panelGrid styleClass="champDetContainer" columns="2">
+				<p:graphicImage url="#{championDetail.curr.image}" styleClass="grayBorder"></p:graphicImage>
+				<p:panelGrid columns="1">
+					<p:outputLabel styleClass="champDetName"
+						value="#{championDetail.curr.name} "></p:outputLabel>
+					<p:outputLabel styleClass="champDetTitle"
+						value="#{championDetail.curr.title}"></p:outputLabel>
+				</p:panelGrid>
+			</p:panelGrid>
+
+			<h:form>
+				<p:panelGrid styleClass="champGameTypeButtons" columns="4">
+					<p:selectOneButton value="#{championDetail.gameMode}">
+						<f:selectItem itemLabel="Classic" itemValue="SR" />
+						<f:selectItem itemLabel="Dominion" itemValue="CS" />
+						<f:selectItem itemLabel="TT" itemValue="TT" />
+						<f:selectItem itemLabel="ARAM" itemValue="HA" />
+						<f:selectItem itemLabel="Any" itemValue="custom" />
+						<p:ajax event="change" update="@form" />
+					</p:selectOneButton>
+				</p:panelGrid>
+
+				<p:dataTable var="itemSet" value="#{championDetail.itemSetData}"
+					paginator="true" rows="30" emptyMessage="No item sets found.">
+					<p:column headerText="Name">
+						<p:link outcome="itemset_detail" value="#{itemSet.name}">
+							<f:param name="id" value="#{itemSet.id}" />
+						</p:link>
+					</p:column>
+
+					<p:column headerText="Map">
+						<h:outputText value="#{itemSet.map}" />
+					</p:column>
+
+					<p:column headerText="Username">
+						<h:outputText value="#{itemSet.username}" />
+					</p:column>
+
+					<p:column headerText="Downloads">
+						<h:outputText value="#{itemSet.download}" />
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

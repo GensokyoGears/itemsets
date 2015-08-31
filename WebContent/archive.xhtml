@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Add New User Form</title>
+</h:head>
+<h:body>
+
+	<ui:composition template="/templates/layout_pf.xhtml">
+		<ui:define name="content">
+			<p:fieldset id="availableItemsField" legend="Champion List">
+				<p:dataGrid styleClass="championList" id="availableItems"
+					var="champion" value="#{archive.championList}" columns="6">
+
+					<p:panel styleClass="itemWidget" id="pnl"
+						header="#{champion.name}">
+						<h:panelGrid columns="1" style="width:100%">
+							<p:button styleClass="championButton" href="champion_detail.xhtml?id=#{champion.id}" value="" style="padding-left: 15px;background-image: url(#{champion.image}) !important;background-repeat: no-repeat;" />
+						</h:panelGrid>
+					</p:panel>
+
+				</p:dataGrid>
+			</p:fieldset>
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

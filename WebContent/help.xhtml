@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Add New User Form</title>
+</h:head>
+<h:body>
+	<ui:composition template="/templates/layout_pf.xhtml">
+
+		<ui:define name="content">
+			<p:panel header="Help Content">
+				<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+					<h:link value="How to create an item set?" fragment="create" />
+					<h:link value="How to import item set to game?" fragment="import" />
+				</h:panelGrid>
+			</p:panel>
+			<br></br>
+			<p:panel id="create" header="How to create an item set?">
+				<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+					<p:outputLabel
+						value="To create an item set, you have to use Create button, on top of the page."></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_1.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="After filling general info, you can add items to blocks. It is done by dragging an item from available items into block."></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_2.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="After filling block a bit, you can reorder items by dragging them up and down."></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_3.png"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="When you are done with current block, you can create another by clicking on Submit block button."></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_4.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="In the Submitted blocks section you can change the order of the blocks in the Item Set by dragging them up or down."></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_9.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="If you think your item set is finished, use create JSON from submitted blocks button."></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_5.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="Your set will be visible to other users. You will get your own JSON file, so you can put it in the game (see below)."></p:outputLabel>
+				</h:panelGrid>
+			</p:panel>
+			<br></br>
+			<p:panel id="import" header="How to import item set to the game?">
+				<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+					<p:outputLabel
+						value="Importing downloaded item set is easy. You just have to copy downloaded file into your League of Legends directory."></p:outputLabel>
+					<br></br>
+					<p:outputLabel
+						value="First - open LoL directory. (default C:\Riot Games\League of Legends\ )"></p:outputLabel>
+					<p:outputLabel
+						value="Head into following directories: Config\Champions\{championKey}\Recommended\"></p:outputLabel>
+					<p:outputLabel
+						value="championKey can be found on your downloaded file name:"></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_6.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel value="Paste your file here, so it looks like this:"></p:outputLabel>
+					<br></br>
+					<p:graphicImage library="images" name="tut_7.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel
+						value="Launch the game. Build should be visible in game, given map and game type matches!"></p:outputLabel>
+					<br></br>
+					<p:outputLabel value="Here is example for Garen:"></p:outputLabel>
+					<p:graphicImage library="images" name="tut_8.jpg"></p:graphicImage>
+					<br></br>
+					<p:outputLabel value="Have fun!"></p:outputLabel>
+				</h:panelGrid>
+			</p:panel>
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

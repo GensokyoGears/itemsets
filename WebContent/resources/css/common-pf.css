@@ -1,0 +1,326 @@
+s /* Eric Meyer's CSS Reset */            
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	main, nav, section, summary {
+	display: block;
+}
+
+body {
+	background-size: 100%;
+	/* 	background: rgba(0, 0, 0, 0) url("http://2.bp.blogspot.com/-g8eIwORxrSI/VAkUf1kwgbI/AAAAAAAAA-0/2eRrFwvlYWE/s1600/Freljord_Wallpaper.jpg") no-repeat fixed center center / cover */
+	background: rgba(0, 0, 0, 0) url("#{resource['images/background.jpg']}")
+		no-repeat fixed center center/cover
+}
+
+.headerContainer {
+	width: 100%;
+	/* 	height: 90px; */
+	/* 	position: fixed; */
+	top: 0;
+	overflow: hidden;
+}
+
+.header {
+	background-color: #35495E;
+	/* 	height: 80px; */
+	height: 93px;
+	margin: 0 auto;
+	width: 1010px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.headerContainer .header {
+	min-width: 583px;
+}
+
+.contentContainer {
+	border: 0 none;
+	margin: 0 auto;
+	min-height: 100%;
+	padding: 0 !important;
+	/* 	width: 80%; */
+	width: 1000px;
+}
+
+.content {
+	/* 	padding-top: 87px !important; */
+	/* 	margin-bottom: 30px !important; */
+	
+}
+
+.footerContainer {
+	width: 100%;
+	height: 30px;
+	/* 	position: fixed; */
+	bottom: 0;
+	overflow: hidden;
+}
+
+.footer {
+	background-color: #35495E;
+	height: 30px;
+	margin: 0 auto;
+	width: 1010px;
+	overflow: hidden;
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+
+.headerRibbon {
+	display: inline-block;
+}
+
+.headerMenu {
+	background-color: gray;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* RIBBON */
+.headerRibbon {
+	margin-left: 5px;
+}
+
+.headerRibbon .ui-menuitem-text {
+	display: block !important;
+	float: none !important;
+}
+
+.headerRibbon .ui-menuitem-icon {
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 0;
+	width: 40px;
+	height: 40px;
+}
+
+.headerRibbon .archive .ui-menuitem-icon {
+	background-image:
+		url("http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3430.png");
+}
+
+.headerRibbon .create .ui-menuitem-icon {
+	background-image:
+		url("http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3434.png");
+}
+
+.headerRibbon .import .ui-menuitem-icon {
+	background-image:
+		url("http://ddragon.leagueoflegends.com/cdn/5.2.1/img/profileicon/20.png");
+}
+
+.headerRibbon .help .ui-menuitem-icon {
+	background-image:
+		url("http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3092.png");
+}
+
+.headerRibbon .about .ui-menuitem-icon {
+	background-image:
+		url("http://ddragon.leagueoflegends.com/cdn/5.16.1/img/item/3184.png");
+}
+
+.headerRibbon .ui-menubar .ui-menuitem-link {
+	width: 60px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.headerRibbon .ui-menuitem-text {
+	font-size: 15px;
+	text-align: center;
+}
+
+.ui-menu .ui-menuitem-link .ui-menuitem-icon {
+	display: block !important;
+	float: none !important;
+	margin: 0 auto;
+}
+
+.availableItems .ui-widget-header {
+	font-size: 9px;
+	height: 22px;
+}
+
+.availableItems .ui-datagrid-column {
+	width: 100%;
+}
+
+.availableItems td {
+	text-align: center;
+}
+
+.ui-panel .ui-panel-content {
+	padding: 4px 1em 0 !important;
+}
+
+.championList .ui-panel .ui-panel-content {
+	padding: 0 !important;
+}
+
+padding: 0 !important ;
+	/* STATS STYLES */ .itemStatsColumn {
+	font-family: Georgia;
+	font-size: 12px;
+}
+
+/* stats { */
+/* 	font-family: Georgia; */
+/* 	font-size: 12px; */
+/* } */
+
+/* active { */
+/* 	font-family: Georgia; */
+/* 	font-size: 12px; */
+/* } */
+
+/* unique { */
+/* 	font-family: Georgia; */
+/* 	font-size: 12px; */
+/* } */
+
+.smallFont {
+	font-family: Georgia;
+	font-size: 12px !important;
+}
+
+.ui-selectmanycheckbox label, .ui-selectoneradio label {
+	display: block;
+	margin-top: 4px;
+	margin-right: 20px;
+}
+
+.ui-radiobutton-icon {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.ui-spinner-input {
+	padding-right: 20px;
+	text-align: right;
+	vertical-align: middle;
+	width: 30px;
+}
+
+.championButton {
+	height: 120px;
+	/* 	width: 100%; */
+	min-width: 120px;
+}
+
+.gameTypeButton {
+	height: 50px;
+	width: 100%;
+	min-width: 50px;
+}
+
+.championList .ui-widget-header {
+	font-size: 9px;
+	/* 	height: 22px; */
+}
+
+/* .championList .ui-datagrid-column { */
+/* 	width: 100%; */
+/* } */
+.championList td {
+	text-align: center;
+}
+
+.champDetHeader {
+	height: 240px;
+	/* 	background-position: center top; */
+	background-position: 0 -77px;
+}
+
+.champDetContainer {
+	/* 	width: 100%; */
+	margin: 0 auto;
+}
+
+.champDetContainer td {
+	vertical-align: top;
+	border: 0 none !important;
+}
+
+.championItemLists {
+	margin-top: 5px;
+}
+
+.champDetContainer table tr {
+	border: 0 none;
+	background: none;
+}
+
+.champGameTypeButtons {
+	margin: 0 auto;
+}
+
+.champGameTypeButtons tr {
+	background: none;
+}
+
+.champGameTypeButtons tr td, .champGameTypeButtons tr {
+	border: 0 none !important;
+}
+
+.ui-panel .ui-panel-title {
+	margin: 0 !important;
+}
+
+.grayBorder {
+	border: 1px solid #666666;
+	border-radius: 6px;
+}
+
+.champDetName {
+	font-weight: bold;
+}
+
+.ui-selectmanycheckbox label, .ui-selectoneradio label {
+    margin-left:4px;
+}

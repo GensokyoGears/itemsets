@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:com="http://java.sun.com/jsf/composite/composites"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Title</title>
+	<h:outputStylesheet name="common-style.css" library="css" />
+</h:head>
+<h:body>
+
+
+	<div class="headerContainer">
+		<div class="header">
+			<div class="headerBanner"></div>
+			<div class="headerMenu">
+				<com:headerRibbon></com:headerRibbon>
+			</div>
+		</div>
+	</div>
+
+	<div class="contentContainer">
+		<div class="content">
+			<ui:insert name="content">
+			</ui:insert>
+		</div>
+	</div>
+	<div class="footerContainer">
+		<div class="footer">
+			<span>Created by GensokyoGears</span>
+		</div>
+	</div>
+
+</h:body>
+</html>

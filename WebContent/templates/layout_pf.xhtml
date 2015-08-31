@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:com="http://java.sun.com/jsf/composite/composites"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>GG ItemSets</title>
+	<h:outputStylesheet name="common-pf.css" library="css" />
+</h:head>
+<h:body>
+
+	<div class="headerContainer">
+		<p:toolbar styleClass="header">
+			<p:toolbarGroup align="center">
+				<div class="poot">
+		
+						<p:graphicImage styleClass="grayBorder" height="90" width="200"
+							library="images" name="header.png" style="float:left;"></p:graphicImage>
+					
+						<com:headerRibbon></com:headerRibbon>
+				</div>
+			</p:toolbarGroup>
+		</p:toolbar>
+	</div>
+	<p:panel styleClass="contentContainer">
+		<div class="content">
+			<ui:insert name="content"></ui:insert>
+		</div>
+	</p:panel>
+
+	<div class="footerContainer">
+		<p:toolbar styleClass="footer">
+			<p:toolbarGroup align="left">
+				<com:footerRibbon></com:footerRibbon>
+			</p:toolbarGroup>
+		</p:toolbar>
+	</div>
+</h:body>
+</html>
